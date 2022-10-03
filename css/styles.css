@@ -31,7 +31,7 @@ body {
   font-family: "Roboto", "Raleway", sans-serif;
   color: #212121;
 }
-.no_underline {
+.no-underline {
   text-decoration: none;
 }
 .header__list,
@@ -60,7 +60,7 @@ body {
   border-bottom: 1px solid #ececec;
   height: 80px;
 }
-.header__item {
+.header__items {
   display: flex;
   align-items: center;
 }
@@ -79,33 +79,6 @@ body {
   gap: 46px;
   padding: 32px 0 32px 93px;
 }
-.header__list--active::after {
-  position: relative;
-  content: "";
-  width: 100%;
-  height: 4px;
-  top: 26px;
-  background: #2196f3;
-  border-radius: 2px;
-  display: block;
-  transition-duration: 250ms;
-  transition-property: background-color;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-.header__list--hover:hover::after,
-.header__list--hover:focus::after {
-  position: relative;
-  content: "";
-  width: 100%;
-  height: 4px;
-  top: 26px;
-  background: #2196f3;
-  border-radius: 2px;
-  display: block;
-  transition-duration: 250ms;
-  transition-property: background-color;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
 .link {
   font-size: 14px;
   font-weight: 500;
@@ -116,17 +89,44 @@ body {
   transition-property: color;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.contacts {
+.header__link--active::after {
+  position: relative;
+  content: "";
+  width: 100%;
+  height: 4px;
+  top: 26px;
+  background: #2196f3;
+  border-radius: 2px;
+  display: block;
+  transition-duration: 250ms;
+  transition-property: background-color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.header__link--hover:hover::after,
+.header__link--hover:focus::after {
+  position: relative;
+  content: "";
+  width: 100%;
+  height: 4px;
+  top: 26px;
+  background: #2196f3;
+  border-radius: 2px;
+  display: block;
+  transition-duration: 250ms;
+  transition-property: background-color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.header-contacts__list {
   display: flex;
   gap: 50px;
   margin-left: auto;
 }
-.contacts__items {
+.header-contacts__items {
   display: flex;
   flex-direction: row-reverse;
   gap: 10px;
 }
-.contacts__text {
+.header-contacts__text {
   font-size: 14px;
   font-weight: 500;
   line-height: 1.14;
@@ -173,7 +173,7 @@ body {
   text-align: center;
   padding-bottom: 30px;
 }
-.banner__text-button {
+.banner__button--text {
   font-family: "Roboto";
   color: var(--white);
   font-weight: 700;
@@ -205,17 +205,17 @@ body {
   margin-bottom: 30px;
   padding: 25px 100px;
 }
-.list_first {
+.lorem__list {
   display: flex;
   gap: 30px;
 }
-.list_first__title {
+.lorem__list--title {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
 }
-.list_first__text {
+.lorem__list--text {
   color: var(--text);
   font-size: 14px;
   line-height: 1.71;
