@@ -16,41 +16,39 @@ h4 {
   margin: 0px;
   padding: 0px;
 }
-.container {
-  width: 1200px;
-  margin: 0 auto;
-  padding: 0 15px;
-}
 img {
   display: block;
-}
-.section {
-  padding: 94px 0;
 }
 body {
   font-family: "Roboto", "Raleway", sans-serif;
   color: #212121;
 }
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.section {
+  padding: 94px 0;
+}
 .no-underline {
   text-decoration: none;
 }
-.header__list,
-.contacts,
-.list_first li,
-.list_second li,
-.list_team li,
-.our_clients li,
-.menu_portfolio,
-.list_portfolio,
-.footer li {
-  list-style: none;
+.thumb {
+  position: relative;
 }
-.contacts__text:hover,
-.contacts__text:focus,
-.link:hover,
-.link:focus,
-.web {
-  color: var(--brand_color);
+.header__list,
+.header__contacts-list,
+.lorem__list,
+.our-services__list,
+.team__list,
+.team__social-list,
+.our-clients__list,
+.footer__contacts-list,
+.footer__socials-list,
+.menu_portfolio,
+.list_portfolio {
+  list-style: none;
 }
 .footer {
   background-color: var(--primary_background);
@@ -64,8 +62,7 @@ body {
   display: flex;
   align-items: center;
 }
-
-.logo {
+.header__logo {
   font-family: "Raleway";
   font-weight: 700;
   font-size: 26px;
@@ -74,12 +71,7 @@ body {
   padding-top: 24px;
   padding-bottom: 25px;
 }
-.header__list {
-  display: flex;
-  gap: 46px;
-  padding: 32px 0 32px 93px;
-}
-.link {
+.header__link {
   font-size: 14px;
   font-weight: 500;
   line-height: 1.14;
@@ -88,6 +80,11 @@ body {
   transition-duration: 250ms;
   transition-property: color;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.header__list {
+  display: flex;
+  gap: 46px;
+  padding: 32px 0 32px 93px;
 }
 .header__link--active::after {
   position: relative;
@@ -102,8 +99,8 @@ body {
   transition-property: background-color;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.header__link--hover:hover::after,
-.header__link--hover:focus::after {
+.header__link:hover::after,
+.header__link:focus::after {
   position: relative;
   content: "";
   width: 100%;
@@ -116,17 +113,17 @@ body {
   transition-property: background-color;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.header-contacts__list {
+.header__contacts-list {
   display: flex;
   gap: 50px;
   margin-left: auto;
 }
-.header-contacts__items {
+.header__contacts-items {
   display: flex;
   flex-direction: row-reverse;
   gap: 10px;
 }
-.header-contacts__text {
+.header__contacts-text {
   font-size: 14px;
   font-weight: 500;
   line-height: 1.14;
@@ -142,13 +139,17 @@ body {
   transition-property: fill;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.contacts__items:hover .icon-envelope,
-.contacts__items:hover .icon-smartphone,
-.contacts__items:focus,
-.contacts__items:focus {
+.header__contacts-items:hover .icon-envelope,
+.header__contacts-items:hover .icon-smartphone,
+.header__contacts-items:focus,
+.header__contacts-items:focus,
+.header__logo--web,
+.footer__logo--web {
   fill: var(--brand_color);
+  color: var(--brand_color);
   cursor: pointer;
 }
+/* banner */
 .banner {
   padding: 200px 0;
   background-image: linear-gradient(
@@ -163,25 +164,6 @@ body {
   margin: auto;
   background-position: center;
 }
-.banner__text {
-  color: var(--white);
-  font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
-  letter-spacing: 0.06em;
-  margin: 0;
-  text-align: center;
-  padding-bottom: 30px;
-}
-.banner__button--text {
-  font-family: "Roboto";
-  color: var(--white);
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.87;
-  text-align: center;
-  letter-spacing: 0.06em;
-}
 .banner__button {
   background-color: var(--brand_color);
   border: 1px #9c9c9c;
@@ -193,11 +175,30 @@ body {
   padding-bottom: 10px;
   padding-top: 10px;
 }
+.banner__text {
+  color: var(--white);
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  letter-spacing: 0.06em;
+  margin: 0;
+  text-align: center;
+  padding-bottom: 30px;
+}
+.banner__button-text {
+  font-family: "Roboto";
+  color: var(--white);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  text-align: center;
+  letter-spacing: 0.06em;
+}
 /* lorem ipsum */
 .lorem {
   padding-bottom: 0px;
 }
-.icon-box {
+.lorem__icon-box {
   background-color: var(--secondary_background);
   height: 120px;
   width: 270px;
@@ -209,48 +210,44 @@ body {
   display: flex;
   gap: 30px;
 }
-.lorem__list--title {
+.lorem__list-title {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
 }
-.lorem__list--text {
+.lorem__list-text {
   color: var(--text);
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
 }
 /* czym się zajmujemy */
-.list_second {
+.our-services {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.16;
   text-align: center;
 }
-.list_second__title {
+.our-services__title {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.16;
 }
-.list_second__item {
+.our-services__list {
   display: flex;
   gap: 30px;
   padding-top: 50px;
 }
-.thumb {
-  position: relative;
-}
-.label {
+.our-services__label {
   background: rgba(47, 48, 58, 0.8);
   position: absolute;
   bottom: 0;
   left: 0;
   width: 370px;
   height: 70px;
-  letter-spacing: 0.03em;
 }
-.label__text {
+.our-services__label-text {
   color: #ffffff;
   text-align: center;
   font-weight: 700;
@@ -264,41 +261,41 @@ body {
 .team {
   background-color: var(--secondary_background);
 }
-.list_team {
-  text-align: center;
-  letter-spacing: 0.03em;
-}
-.list_team__title {
+.team__title {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.16;
+  letter-spacing: 0.03em;
+  text-align: center;
 }
-.list_team__item {
+.team__list {
   display: flex;
   padding-top: 50px;
   margin: 0 -15px;
+  letter-spacing: 0.03em;
+  text-align: center;
 }
-.list_team__item__name {
+.team__name {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.18;
   padding-top: 30px;
   padding-bottom: 10px;
 }
-.list_team__item__profession {
+.list__profession {
   color: var(--text);
   font-size: 16px;
   line-height: 1.18;
   padding-bottom: 30px;
 }
-.photo-frame {
+.team__figure {
   margin: 0px 15px;
   background-color: var(--white);
   border-radius: 4px;
   box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
     0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
 }
-.team_social_links {
+.team__social-list {
   display: flex;
   gap: 10px;
   align-items: center;
@@ -310,16 +307,16 @@ body {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* klienci */
-.our_clients {
+.our-clients {
   text-align: center;
 }
-.our_clients__title {
+.our-clients__title {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.16;
   letter-spacing: 0.03em;
 }
-.our_clients__list {
+.our-clients__list {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -337,7 +334,7 @@ body {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .icon-logo:hover,
-.our_clients__link:focus .icon-logo {
+.our-clients__link:focus .icon-logo {
   fill: var(--brand_color);
   border: 1px solid var(--brand_color);
 }
@@ -346,7 +343,7 @@ body {
 .footer {
   color: var(--white);
 }
-.footer_container {
+.footer-container {
   display: flex;
   width: 1200px;
   margin: 0 auto;
@@ -374,7 +371,16 @@ body {
   flex-direction: column;
   gap: 9px;
 }
-.address {
+.footer__contacts-text {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.14;
+  color: var(--text);
+  transition-duration: 250ms;
+  transition-property: color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.footer__address {
   font-style: normal;
   font-size: 14px;
   line-height: 1.7;
@@ -382,11 +388,11 @@ body {
 .footer__socials {
   padding: 72px 0 100px 70px;
 }
-.footer__socials__items {
+.footer__socials-list {
   display: flex;
   gap: 10px;
 }
-.footer__socials__title {
+.footer__socials-title {
   padding-bottom: 20px;
   font-weight: 700;
   font-size: 14px;
@@ -414,8 +420,8 @@ body {
 }
 .icon-social:hover,
 .icon-social2:hover,
-.team_social_links__item:focus .icon-social,
-.footer__socials__link:focus .icon-social2 {
+.team__icon:focus .icon-social,
+.footer__socials-link:focus .icon-social2 {
   background-color: var(--brand_color);
   fill: var(--white);
   cursor: pointer;
