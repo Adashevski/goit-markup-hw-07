@@ -9,7 +9,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
     />
-    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/main.min.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -19,37 +19,33 @@
   </head>
   <body>
     <header class="header">
-      <div class="container header__item">
-        <a class="logo no_underline" href="index.html"
-          ><span class="web">Web</span>Studio</a
+      <div class="container header__items">
+        <a class="header__logo no-underline" href="index.html"
+          ><span class="header__logo--web">Web</span>Studio</a
         >
         <nav>
           <ul class="header__list">
             <li>
               <a
-                class="link no_underline header__list--active"
+                class="header__link header__link--active no-underline"
                 href="index.html"
                 >Agencja</a
               >
             </li>
             <li>
-              <a
-                class="link no_underline header__list--hover"
-                href="portfolio.html"
+              <a class="header__link no-underline" href="portfolio.html"
                 >Portfolio</a
               >
             </li>
             <li>
-              <a class="link no_underline header__list--hover" href="#"
-                >Kontakt</a
-              >
+              <a class="header__link no-underline" href="#">Kontakt</a>
             </li>
           </ul>
         </nav>
-        <ul class="contacts">
-          <li class="contacts__items">
+        <ul class="header__contacts-list">
+          <li class="header__contacts-items">
             <a
-              class="contacts__text no_underline"
+              class="header__contacts-text no-underline"
               href="mailto:info@devstudio.com"
               >info@devstudio.com</a
             >
@@ -57,8 +53,10 @@
               <use href="./images/icons.svg#icon-envelope"></use>
             </svg>
           </li>
-          <li class="contacts__items">
-            <a class="contacts__text no_underline" href="tel:+48111111111"
+          <li class="header__contacts-items">
+            <a
+              class="header__contacts-text no-underline"
+              href="tel:+48111111111"
               >+48 111 111 111</a
             >
             <svg class="icon-smartphone" width="10" height="16">
@@ -70,26 +68,32 @@
     </header>
     <main>
       <section class="section">
-        <ul class="menu_portfolio">
+        <ul class="portfolio-menu">
           <li>
-            <button type="button" class="button_portfolio">Wszystkie</button>
+            <button type="button" class="portfolio-menu__button">
+              Wszystkie
+            </button>
           </li>
           <li>
-            <button type="button" class="button_portfolio">Strony</button>
+            <button type="button" class="portfolio-menu__button">Strony</button>
           </li>
           <li>
-            <button type="button" class="button_portfolio">Aplikacje</button>
+            <button type="button" class="portfolio-menu__button">
+              Aplikacje
+            </button>
           </li>
           <li>
-            <button type="button" class="button_portfolio">Dizajn</button>
+            <button type="button" class="portfolio-menu__button">Dizajn</button>
           </li>
           <li>
-            <button type="button" class="button_portfolio">Marketing</button>
+            <button type="button" class="portfolio-menu__button">
+              Marketing
+            </button>
           </li>
         </ul>
-        <ul class="container list_portfolio">
-          <li class="list_portfolio__item">
-            <figure class="figure thumb overlay-box">
+        <ul class="container portfolio-list">
+          <li class="portfolio-list__item">
+            <figure class="portfolio-list__figure thumb overlay-box">
               <img
                 class=""
                 src="./images/technocrack.jpg"
@@ -97,8 +101,8 @@
                 width="370"
                 height="294"
               />
-              <h3 class="list_portfolio__title">Technocrack</h3>
-              <p class="list_portfolio__description">Strona internetowa</p>
+              <h3 class="portfolio-list__title">Technocrack</h3>
+              <p class="portfolio-list__description">Strona internetowa</p>
               <div class="overlay-technocrack">
                 <p class="overlay__text">
                   Technocrack jest popularną platformą wykorzystywaną do
@@ -109,18 +113,18 @@
               </div>
             </figure>
           </li>
-          <li class="list_portfolio__item">
-            <figure class="figure thumb overlay-box">
+          <li class="portfolio-list__item">
+            <figure class="portfolio-list__figure thumb overlay-box">
               <img
                 src="./images/new_orleans.jpg"
                 alt="dwóch zawodników walczących o piłkę"
                 width="370"
                 height="294"
               />
-              <h3 class="list_portfolio__title">
+              <h3 class="portfolio-list__title">
                 Grafika New Orlean vs Golden Star
               </h3>
-              <p class="list_portfolio__description">Dizajn</p>
+              <p class="portfolio-list__description">Dizajn</p>
               <div class="overlay">
                 <p class="overlay__text">
                   Lorem, ipsum dolor sit amet consectetur adipisicing elit.
@@ -132,16 +136,16 @@
               </div>
             </figure>
           </li>
-          <li class="list_portfolio__item thumb">
-            <figure class="figure thumb overlay-box">
+          <li class="portfolio-list__item thumb">
+            <figure class="portfolio-list__figure thumb overlay-box">
               <img
                 src="./images/seafood.jpg"
                 alt="logo restauracji"
                 width="370"
                 height="294"
               />
-              <h3 class="list_portfolio__title">Restauracja Seafood</h3>
-              <p class="list_portfolio__description">Aplikacja</p>
+              <h3 class="portfolio-list__title">Restauracja Seafood</h3>
+              <p class="portfolio-list__description">Aplikacja</p>
               <div class="overlay">
                 <p class="overlay__text">
                   Lorem, ipsum dolor sit amet consectetur adipisicing elit.
@@ -153,16 +157,16 @@
               </div>
             </figure>
           </li>
-          <li class="list_portfolio__item thumb">
-            <figure class="figure thumb overlay-box">
+          <li class="portfolio-list__item thumb">
+            <figure class="portfolio-list__figure thumb overlay-box">
               <img
                 src="./images/projekt_prime.jpg"
                 alt="słuchawki"
                 width="370"
                 height="294"
               />
-              <h3 class="list_portfolio__title">Projekt Prime</h3>
-              <p class="list_portfolio__description">Marketing</p>
+              <h3 class="portfolio-list__title">Projekt Prime</h3>
+              <p class="portfolio-list__description">Marketing</p>
               <div class="overlay">
                 <p class="overlay__text">
                   Lorem, ipsum dolor sit amet consectetur adipisicing elit.
@@ -174,16 +178,16 @@
               </div>
             </figure>
           </li>
-          <li class="list_portfolio__item thumb">
-            <figure class="figure thumb overlay-box">
+          <li class="portfolio-list__item thumb">
+            <figure class="portfolio-list__figure thumb overlay-box">
               <img
                 src="./images/projekt_boxes.jpg"
                 alt="pudełka"
                 width="370"
                 height="294"
               />
-              <h3 class="list_portfolio__title">Projekt Boxes</h3>
-              <p class="list_portfolio__description">Aplikacja</p>
+              <h3 class="portfolio-list__title">Projekt Boxes</h3>
+              <p class="portfolio-list__description">Aplikacja</p>
               <div class="overlay">
                 <p class="overlay__text">
                   Lorem, ipsum dolor sit amet consectetur adipisicing elit.
@@ -195,16 +199,16 @@
               </div>
             </figure>
           </li>
-          <li class="list_portfolio__item thumb">
-            <figure class="figure thumb overlay-box">
+          <li class="portfolio-list__item thumb">
+            <figure class="portfolio-list__figure thumb overlay-box">
               <img
                 src="./images/inspiration.jpg"
                 alt="podgląd strony internetowej z mapą świata"
                 width="370"
                 height="294"
               />
-              <h3 class="list_portfolio__title">Inspiration has no Borders</h3>
-              <p class="list_portfolio__description">Strona internetowa</p>
+              <h3 class="portfolio-list__title">Inspiration has no Borders</h3>
+              <p class="portfolio-list__description">Strona internetowa</p>
               <div class="overlay">
                 <p class="overlay__text">
                   Lorem, ipsum dolor sit amet consectetur adipisicing elit.
@@ -216,16 +220,16 @@
               </div>
             </figure>
           </li>
-          <li class="list_portfolio__item thumb">
-            <figure class="figure thumb overlay-box">
+          <li class="portfolio-list__item thumb">
+            <figure class="portfolio-list__figure thumb overlay-box">
               <img
                 src="./images/limited_edition.jpg"
                 alt="otwarte czasopismo"
                 width="370"
                 height="294"
               />
-              <h3 class="list_portfolio__title">Magazyn Limited Edition</h3>
-              <p class="list_portfolio__description">Dizajn</p>
+              <h3 class="portfolio-list__title">Magazyn Limited Edition</h3>
+              <p class="portfolio-list__description">Dizajn</p>
               <div class="overlay">
                 <p class="overlay__text">
                   Lorem, ipsum dolor sit amet consectetur adipisicing elit.
@@ -237,16 +241,16 @@
               </div>
             </figure>
           </li>
-          <li class="list_portfolio__item thumb">
-            <figure class="figure thumb overlay-box">
+          <li class="portfolio-list__item thumb">
+            <figure class="portfolio-list__figure thumb overlay-box">
               <img
                 src="./images/projekt_lab.jpg"
                 alt="etykieta"
                 width="370"
                 height="294"
               />
-              <h3 class="list_portfolio__title">Projekt LAB</h3>
-              <p class="list_portfolio__description">Marketing</p>
+              <h3 class="portfolio-list__title">Projekt LAB</h3>
+              <p class="portfolio-list__description">Marketing</p>
               <div class="overlay">
                 <p class="overlay__text">
                   Lorem, ipsum dolor sit amet consectetur adipisicing elit.
@@ -258,8 +262,8 @@
               </div>
             </figure>
           </li>
-          <li class="list_portfolio__item">
-            <figure class="figure thumb overlay-box">
+          <li class="portfolio-list__item">
+            <figure class="portfolio-list__figure thumb overlay-box">
               <div class="overlay-box">
                 <img
                   src="./images/growing_business.jpg"
@@ -268,8 +272,8 @@
                   height="294"
                 />
               </div>
-              <h3 class="list_portfolio__title">Growing Business</h3>
-              <p class="list_portfolio__description">Aplikacja</p>
+              <h3 class="portfolio-list__title">Growing Business</h3>
+              <p class="portfolio-list__description">Aplikacja</p>
               <div class="overlay">
                 <p class="overlay__text">
                   Lorem, ipsum dolor sit amet consectetur adipisicing elit.
@@ -285,25 +289,28 @@
       </section>
     </main>
     <footer class="footer">
-      <section class="footer_container">
+      <section class="footer-container">
         <div class="footer__items">
-          <a class="footer__logo no_underline" href="index.html"
-            ><span class="web">Web</span><span class="studio">Studio</span></a
+          <a class="footer__logo no-underline" href="index.html"
+            ><span class="footer__logo--web">Web</span
+            ><span class="studio">Studio</span></a
           >
           <div class="footer__contacts">
-            <address class="address">
+            <address class="footer__address">
               m. Warszawa, Aleje Jerozolimskie 21
             </address>
             <ul class="footer__contacts-list">
               <li>
                 <a
-                  class="contacts__text no_underline"
+                  class="footer__contacts-text no-underline"
                   href="mailto:info@example.com"
                   >info@example.com</a
                 >
               </li>
               <li>
-                <a class="contacts__text no_underline" href="tel:+48111111111"
+                <a
+                  class="footer__contacts-text no-underline"
+                  href="tel:+48111111111"
                   >+48 111 111 111</a
                 >
               </li>
@@ -312,11 +319,11 @@
         </div>
         <section class="footer__socials">
           <div>
-            <h3 class="footer__socials__title">DOŁĄCZ DO NAS</h3>
+            <h3 class="footer__socials-title">DOŁĄCZ DO NAS</h3>
             <div>
-              <ul class="footer__socials__items">
+              <ul class="footer__socials-list">
                 <li>
-                  <a class="footer__socials__link" href="#"
+                  <a class="footer__socials-link" href="#"
                     ><svg class="icon-social2">
                       <use
                         href="./images/icons.svg#icon-instagram-2"
@@ -329,7 +336,7 @@
                   </a>
                 </li>
                 <li>
-                  <a class="footer__socials__link" href="#"
+                  <a class="footer__socials-link" href="#"
                     ><svg class="icon-social2">
                       <use
                         href="./images/icons.svg#icon-twitter-1"
@@ -342,7 +349,7 @@
                   </a>
                 </li>
                 <li>
-                  <a class="footer__socials__link" href="#"
+                  <a class="footer__socials-link" href="#"
                     ><svg class="icon-social2">
                       <use
                         href="./images/icons.svg#icon-facebook-1"
@@ -355,7 +362,7 @@
                   </a>
                 </li>
                 <li>
-                  <a class="footer__socials__link" href="#"
+                  <a class="footer__socials-link" href="#"
                     ><svg class="icon-social2">
                       <use
                         href="./images/icons.svg#icon-linkedin-1"
@@ -385,10 +392,10 @@
 
               <button
                 type="submit"
-                class="newsletter__button newsletter__button--style"
+                class="newsletter__button newsletter__button-style"
               >
                 Zapisz się
-                <svg class="newsletter__icon" width="24px" height="24px">
+                <svg class="newsletter-icon" width="24px" height="24px">
                   <use href="./images/icons.svg#icon-send"></use>
                 </svg>
               </button>
